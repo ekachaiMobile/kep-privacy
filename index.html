@@ -41,7 +41,7 @@
 <header>
   <h1>นโยบายความเป็นส่วนตัวของ Kep</h1>
   <p class="sub">Kep ทำงานบนเครื่องของคุณทั้งหมด ไม่มีบัญชีผู้ใช้ ไม่มีเซิร์ฟเวอร์ ไม่มีการเก็บสถิติ และไม่มีโฆษณา</p>
-  <p class="meta">ปรับปรุงล่าสุด 11 กันยายน 2569 · เวอร์ชัน 1.3 · <a href="#english">English version below</a></p>
+  <p class="meta">ปรับปรุงล่าสุด 13 กันยายน 2569 · เวอร์ชัน 1.4 · <a href="#english">English version below</a></p>
 </header>
 
 <h2>ข้อมูลที่ Kep เก็บไว้ในเครื่อง</h2>
@@ -76,11 +76,30 @@
     <td>เมื่อคุณตั้งเตือนรายการใดรายการหนึ่ง</td>
     <td>เป็นการแจ้งเตือนภายในเครื่องทั้งหมด ไม่มี push จากเซิร์ฟเวอร์</td>
   </tr>
+  <tr>
+    <td>ปฏิทิน</td>
+    <td>เมื่อคุณกด “เพิ่ม Calendar” จากวันที่ที่พบในรายการ</td>
+    <td>ขอสิทธิ์เขียนอย่างเดียว Kep ไม่อ่านกิจกรรมที่มีอยู่ และกิจกรรมจะถูกเพิ่มต่อเมื่อคุณกดบันทึกในหน้าจอปฏิทินของระบบ</td>
+  </tr>
+  <tr>
+    <td>Face ID</td>
+    <td>เมื่อคุณเปิดการล็อกแอป</td>
+    <td>iOS เป็นผู้ตรวจสอบและบอก Kep เพียงว่าผ่านหรือไม่ Kep ไม่เคยได้รับข้อมูลใบหน้าหรือลายนิ้วมือ</td>
+  </tr>
+  <tr>
+    <td>Clipboard</td>
+    <td>เมื่อคุณสั่ง Shortcut “เก็บ Clipboard เข้า Kep” เท่านั้น</td>
+    <td>อ่านเฉพาะตอนที่สั่ง ไม่อ่านเบื้องหลัง และโดยค่าเริ่มต้น iOS จะถามก่อน</td>
+  </tr>
 </table>
 <p>หากคุณไม่ให้สิทธิ์รูปภาพ คุณยังใช้ Kep ได้เต็มรูปแบบผ่านการเลือกรูปเองหรือแชร์เข้ามา</p>
 
 <h2>การประมวลผลด้วย AI</h2>
-<p>OCR ภาษาไทยและอังกฤษทำงานด้วย Vision บนเครื่อง การตั้งชื่อ สรุป และจัดหมวดหมู่ใช้ Foundation Models ของ Apple บนเครื่องที่รองรับ Apple Intelligence โดยประมวลผลบนอุปกรณ์ หากอุปกรณ์ไม่รองรับ Kep จะใช้ตัววิเคราะห์ภายในของตัวเองแทน ไม่มีขั้นตอนใดที่ส่งรูปหรือข้อความของคุณออกจากเครื่อง</p>
+<p>Spotlight: ปิดไว้เป็นค่าเริ่มต้น ถ้าคุณเปิดเอง Kep จะใส่ชื่อ สรุป แท็ก และข้อความ OCR ลงในดัชนีค้นหาของ iOS ซึ่งอยู่ในเครื่องนี้เท่านั้น ปิดเมื่อใดก็ลบออกจากดัชนีทันที</p>
+
+<p>การส่งออกและไฟล์สำรอง: Kep สร้างไฟล์ไว้ในพื้นที่ชั่วคราวของแอปเท่านั้น แล้วส่งต่อผ่านแผงแชร์ของระบบไปยังที่ที่คุณเลือก ไม่มีการอัปโหลดที่ไหนโดยอัตโนมัติ</p>
+
+<p>OCR ภาษาไทย อังกฤษ จีนตัวเต็ม และอาหรับทำงานด้วย Vision บนเครื่อง การตั้งชื่อ สรุป และจัดหมวดหมู่ใช้ Foundation Models ของ Apple บนเครื่องที่รองรับ Apple Intelligence โดยประมวลผลบนอุปกรณ์ หากอุปกรณ์ไม่รองรับ Kep จะใช้ตัววิเคราะห์ภายในของตัวเองแทน ไม่มีขั้นตอนใดที่ส่งรูปหรือข้อความของคุณออกจากเครื่อง</p>
 
 <h2>การซื้อในแอป</h2>
 <p>Kep Pro ขายผ่าน StoreKit ของ Apple การชำระเงินและข้อมูลบัตรทั้งหมดจัดการโดย Apple โดยตรง Kep ได้รับเพียงสถานะว่าคุณมีสิทธิ์ใช้งาน Pro หรือไม่ และไม่เคยเห็นข้อมูลการชำระเงินของคุณ</p>
@@ -143,11 +162,30 @@
     <td>Only when you set a reminder on an item</td>
     <td>Purely local notifications; no server push.</td>
   </tr>
+  <tr>
+    <td>Calendar</td>
+    <td>Only when you tap “Add to Calendar” on a date found in an item</td>
+    <td>Write-only access. Kep never reads your existing events, and nothing is added until you tap Add in the system’s own event editor.</td>
+  </tr>
+  <tr>
+    <td>Face ID</td>
+    <td>Only when you turn on the app lock</td>
+    <td>iOS does the check and tells Kep only whether it passed. Kep never receives face or fingerprint data.</td>
+  </tr>
+  <tr>
+    <td>Clipboard</td>
+    <td>Only when you run the “Save clipboard to Kep” shortcut</td>
+    <td>Read at that moment only, never in the background, and iOS asks first unless you have allowed it in Settings.</td>
+  </tr>
 </table>
 <p>Declining Photos access does not disable Kep — you can still pick images manually or share them in.</p>
 
 <h3>On-device AI</h3>
-<p>Thai and English OCR runs on device with Vision. Titles, summaries, and categories use Apple's Foundation Models on Apple Intelligence-capable devices, processed on device; otherwise Kep falls back to its own local analyzer. Nothing is sent off the device at any step.</p>
+<p>Spotlight: off by default. If you turn it on, Kep adds each item's title, summary, tags, and recognized text to the iOS search index, which stays on this device. Turning it off removes them again immediately.</p>
+
+<p>Exports and backups: Kep writes the file into its own temporary space and hands it to the system share sheet, which sends it only where you choose. Nothing is uploaded anywhere on its own.</p>
+
+<p>Thai, English, Traditional Chinese, and Arabic OCR runs on device with Vision. Titles, summaries, and categories use Apple's Foundation Models on Apple Intelligence-capable devices, processed on device; otherwise Kep falls back to its own local analyzer. Nothing is sent off the device at any step.</p>
 
 <h3>In-app purchases</h3>
 <p>Kep Pro is sold through Apple's StoreKit. Apple handles all payment and card data directly. Kep only receives whether you are entitled to Pro, and never sees your payment details.</p>
